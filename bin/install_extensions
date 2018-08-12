@@ -7,6 +7,35 @@
 
 # EXECUTION
 
+# VSCode - Go lang
+code --install-extension ms-vscode.go
+
+# VSCode - Git
+code --install-extension eamodio.gitlens
+code --install-extension donjayamanne.githistory
+code --install-extension huizhou.githd
+
+# VSCode - Typescript
+code --install-extension eg2.tslint
+
+# VSCode - Auto Import
+code --install-extension steoates.autoimport
+
+# VSCode - Docker
+code --install-extension peterjausovec.vscode-docker
+code --install-extension tqrhsn.vscode-docker-registry-explorer
+
+# VSCode - Keybinding
+code --install-extension k--kato.intellij-idea-keybindings
+
+# VSCode - TODO Highlight
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension fabiospampinato.vscode-todo-plus
+code --install-extension gruntfuggly.todo-tree
+
+# VSCode - File Icons
+code --install-extension pkief.material-icon-theme
+
 # Vim - Blockle
 install_git_app "$VIM_BLOCKLE_EXTENSION_URL" "$VIM_BLOCKLE_EXTENSION_PATH"
 
@@ -28,20 +57,11 @@ install_file "$VIM_PATHOGEN_EXTENSION_URL" "$VIM_PATHOGEN_EXTENSION_PATH"
 # Vim - Projectionist
 install_git_app "$VIM_PROJECTIONIST_EXTENSION_URL" "$VIM_PROJECTIONIST_EXTENSION_PATH"
 
-# Vim - Rails
-install_git_app "$VIM_RAILS_EXTENSION_URL" "$VIM_RAILS_EXTENSION_PATH"
-
-# Vim - Ruby
-install_git_app "$VIM_RUBY_EXTENSION_URL" "$VIM_RUBY_EXTENSION_PATH"
-
 # Vim - Splitjoin
 install_git_app "$VIM_SPLITJOIN_EXTENSION_URL" "$VIM_SPLITJOIN_EXTENSION_PATH"
 
 # Vim - Text Object
 install_git_app "$VIM_TEXT_OBJECT_EXTENSION_URL" "$VIM_TEXT_OBJECT_EXTENSION_PATH"
-
-# Vim - Text Object Ruby Block
-install_git_app "$VIM_TEXT_OBJECT_RUBY_BLOCK_EXTENSION_URL" "$VIM_TEXT_OBJECT_RUBY_BLOCK_EXTENSION_PATH"
 
 # Vim - Unimpaired
 install_git_app "$VIM_UNIMPAIRED_EXTENSION_URL" "$VIM_UNIMPAIRED_EXTENSION_PATH"

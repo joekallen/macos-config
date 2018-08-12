@@ -1,11 +1,11 @@
 # macOS Configuration
 
-[![Circle CI Status](https://circleci.com/gh/bkuhlmann/mac_os-config.svg?style=svg)](https://circleci.com/gh/bkuhlmann/mac_os-config)
+[![Circle CI Status](https://circleci.com/gh/joekallen/macos-config.svg?style=svg)](https://circleci.com/gh/joekallen/macos-config)
 
 Shell scripts for customized macOS machine setup and configuration.
 
 This project provides a highly opinionated default configuration built upon the
-[macOS](https://github.com/bkuhlmann/mac_os) project. Should the configuration provided by this
+[macOS](https://github.com/joekallen/macos) project. Should the configuration provided by this
 project not be to your liking, feel free to fork and customize for your specific needs.
 
 <!-- Tocer[start]: Auto-generated, don't remove. -->
@@ -215,7 +215,7 @@ project not be to your liking, feel free to fork and customize for your specific
 
 ## Requirements
 
-1. [macOS](https://github.com/bkuhlmann/mac_os)
+1. [macOS](https://github.com/joekallen/macos)
 
 ## Setup
 
@@ -224,14 +224,14 @@ preference:
 
 Current Version (stable):
 
-    git clone https://github.com/bkuhlmann/mac_os-config.git
-    cd mac_os-config
+    git clone https://github.com/joekallen/macos-config.git
+    cd macos-config
     git checkout 7.1.0
 
 Master Version (unstable):
 
-    git clone https://github.com/bkuhlmann/mac_os-config.git
-    cd mac_os-config
+    git clone https://github.com/joekallen/macos-config.git
+    cd macos-config
 
 ## Usage
 
@@ -246,7 +246,7 @@ Double check you have the following in place:
 
 ### Install
 
-See the [macOS](https://github.com/bkuhlmann/mac_os#usage) project for usage as it provides the
+See the [macOS](https://github.com/joekallen/macos#usage) project for usage as it provides the
 command line interface for running the configuration defined by this project.
 
 ### Post-Install
@@ -302,7 +302,7 @@ the following configurations:
 - `/etc/newsyslog.d/alchemists.conf`
 
         # logfilename                                            [owner:group]    mode   count   size  when  flags
-        /Users/bkuhlmann/Dropbox/Development/Work/**/log/*.log                    644    2       5120  *     GJN
+        /Users/joekallen/Dropbox/Development/Work/**/log/*.log                    644    2       5120  *     GJN
 - `/etc/newsyslog.d/homebrew.conf`
 
         # logfilename                   [owner:group]    mode   count   size    when  flags
@@ -391,7 +391,7 @@ Read [LICENSE](LICENSE.md) for details.
 ## History
 
 Read [CHANGES](CHANGES.md) for details.
-Built with [Bashsmith](https://github.com/bkuhlmann/bashsmith).
+Built with [Bashsmith](https://github.com/joekallen/bashsmith).
 
 ## Credits
 

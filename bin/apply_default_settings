@@ -4,6 +4,9 @@
 # Applies system and application defaults.
 
 # EXECUTION
+printf "Shell - Update default shell to ZSH"
+chsh -s /bin/zsh
+
 printf "System - Disable boot sound effects\n"
 sudo nvram SystemAudioVolume=" "
 
@@ -25,8 +28,8 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 printf "System - Disable window resume system-wide\n"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-printf "System - Disable auto-correct\n"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# printf "System - Disable auto-correct\n"
+# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 printf "System - Disable smart quotes (not useful when writing code)\n"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -56,8 +59,10 @@ defaults write com.apple.BezelServices kDimTime -int 300
 printf "Keyboard - Enable keyboard access for all controls\n"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Does this event work?
 printf "Keyboard - Set a fast keyboard repeat rate\n"
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write -g InitialKeyRepeat -int 10
 
 printf "Keyboard - Disable press-and-hold for keys in favor of key repeat\n"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -101,8 +106,8 @@ defaults write com.apple.dock autohide -bool true
 printf "Dock - Remove the auto-hiding delay\n"
 defaults write com.apple.Dock autohide-delay -float 0
 
-printf "Dock - Don’t show Dashboard as a Space\n"
-defaults write com.apple.dock "dashboard-in-overlay" -bool true
+# printf "Dock - Don’t show Dashboard as a Space\n"
+# defaults write com.apple.dock "dashboard-in-overlay" -bool true
 
 printf "iCloud - Save to disk by default\n"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -216,147 +221,147 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 printf "App Store - Enable Debug Menu in the Mac App Store\n"
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-printf "CCMenu - Add open source projects\n"
-defaults write net.sourceforge.cruisecontrol.CCMenu Projects '
-(
-  {
-    projectName = "bkuhlmann/alfred";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/alfred.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/archiver";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/archiver.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/auther";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/auther.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/bashsmith";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/bashsmith.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/code_quality";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/code_quality.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/dotfiles";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/dotfiles.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/flacsmith";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/flacsmith.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/form-validator";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/form-validator.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/gemsmith";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/gemsmith.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/git-cop";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/git-cop.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/lineage";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/lineage.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/linguist";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/linguist.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/mac_os";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/mac_os.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/mac_os-config";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/mac_os-config.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/milestoner";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/milestoner.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/navigator";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/navigator.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/pennyworth";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/pennyworth.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/pragmater";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/pragmater.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/prawn_plus";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/prawn_plus.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/rails_dummy_template";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/rails_dummy_template.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/rails_slim_template";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/rails_slim_template.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/refinements";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/refinements.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/resourcer";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/resourcer.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/ruby_setup";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/ruby_setup.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/runcom";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/runcom.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/sessioner";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/sessioner.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/sorter";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/sorter.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/style_guides";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/style_guides.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/sublime_text_kit";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/sublime_text_kit.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/sublime_text_setup";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/sublime_text_setup.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/tocer";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/tocer.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/tokener";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/tokener.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/ubuntu";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/ubuntu.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/versionaire";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/versionaire.cc.xml";
-  },
-  {
-    projectName = "bkuhlmann/yarn_setup";
-    serverUrl = "https://circleci.com/gh/bkuhlmann/yarn_setup.cc.xml";
-  }
-)'
+# printf "CCMenu - Add open source projects\n"
+# defaults write net.sourceforge.cruisecontrol.CCMenu Projects '
+# (
+#   {
+#     projectName = "joekallen/alfred";
+#     serverUrl = "https://circleci.com/gh/joekallen/alfred.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/archiver";
+#     serverUrl = "https://circleci.com/gh/joekallen/archiver.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/auther";
+#     serverUrl = "https://circleci.com/gh/joekallen/auther.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/bashsmith";
+#     serverUrl = "https://circleci.com/gh/joekallen/bashsmith.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/code_quality";
+#     serverUrl = "https://circleci.com/gh/joekallen/code_quality.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/dotfiles";
+#     serverUrl = "https://circleci.com/gh/joekallen/dotfiles.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/flacsmith";
+#     serverUrl = "https://circleci.com/gh/joekallen/flacsmith.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/form-validator";
+#     serverUrl = "https://circleci.com/gh/joekallen/form-validator.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/gemsmith";
+#     serverUrl = "https://circleci.com/gh/joekallen/gemsmith.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/git-cop";
+#     serverUrl = "https://circleci.com/gh/joekallen/git-cop.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/lineage";
+#     serverUrl = "https://circleci.com/gh/joekallen/lineage.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/linguist";
+#     serverUrl = "https://circleci.com/gh/joekallen/linguist.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/macos";
+#     serverUrl = "https://circleci.com/gh/joekallen/macos.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/macos-config";
+#     serverUrl = "https://circleci.com/gh/joekallen/macos-config.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/milestoner";
+#     serverUrl = "https://circleci.com/gh/joekallen/milestoner.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/navigator";
+#     serverUrl = "https://circleci.com/gh/joekallen/navigator.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/pennyworth";
+#     serverUrl = "https://circleci.com/gh/joekallen/pennyworth.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/pragmater";
+#     serverUrl = "https://circleci.com/gh/joekallen/pragmater.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/prawn_plus";
+#     serverUrl = "https://circleci.com/gh/joekallen/prawn_plus.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/rails_dummy_template";
+#     serverUrl = "https://circleci.com/gh/joekallen/rails_dummy_template.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/rails_slim_template";
+#     serverUrl = "https://circleci.com/gh/joekallen/rails_slim_template.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/refinements";
+#     serverUrl = "https://circleci.com/gh/joekallen/refinements.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/resourcer";
+#     serverUrl = "https://circleci.com/gh/joekallen/resourcer.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/ruby_setup";
+#     serverUrl = "https://circleci.com/gh/joekallen/ruby_setup.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/runcom";
+#     serverUrl = "https://circleci.com/gh/joekallen/runcom.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/sessioner";
+#     serverUrl = "https://circleci.com/gh/joekallen/sessioner.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/sorter";
+#     serverUrl = "https://circleci.com/gh/joekallen/sorter.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/style_guides";
+#     serverUrl = "https://circleci.com/gh/joekallen/style_guides.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/sublime_text_kit";
+#     serverUrl = "https://circleci.com/gh/joekallen/sublime_text_kit.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/sublime_text_setup";
+#     serverUrl = "https://circleci.com/gh/joekallen/sublime_text_setup.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/tocer";
+#     serverUrl = "https://circleci.com/gh/joekallen/tocer.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/tokener";
+#     serverUrl = "https://circleci.com/gh/joekallen/tokener.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/ubuntu";
+#     serverUrl = "https://circleci.com/gh/joekallen/ubuntu.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/versionaire";
+#     serverUrl = "https://circleci.com/gh/joekallen/versionaire.cc.xml";
+#   },
+#   {
+#     projectName = "joekallen/yarn_setup";
+#     serverUrl = "https://circleci.com/gh/joekallen/yarn_setup.cc.xml";
+#   }
+# )'

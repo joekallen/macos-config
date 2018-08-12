@@ -15,58 +15,58 @@ fi
 brew install readline
 
 # OpenSSL
-brew install openssl
+# brew install openssl
 
 # asciinema
-brew install asciinema
+# brew install asciinema
 
 # Bash
-brew install bash
+# brew install bash
 
 # Bash Completion
-brew install bash-completion
+# brew install bash-completion
 
 # Certbot
-brew install certbot
+# brew install certbot
 
 # chruby
-brew install chruby
+# brew install chruby
 
 # cloc
-brew install cloc
+# brew install cloc
 
 # Colorized Cat
 brew install ccat
 
 # Crystal
-brew install crystal
+# brew install crystal
 
 # CTags
 brew install ctags
 
 # Diff So Fancy
-brew install diff-so-fancy
+# brew install diff-so-fancy
 
-# direnv
+# direnv - load or unload env variables based on current working directory
 brew install direnv
 
-# duti
+# duti - command line tool to select default applications for document types
 brew install duti
 
 # ExifTool
-brew install exiftool
+# brew install exiftool
 
 # Elasticsearch
-brew install elasticsearch
+# brew install elasticsearch
 
 # Elm
-brew install elm
+# brew install elm
 
 # FLAC
-brew install flac
+# brew install flac
 
 # FZF
-brew install fzf
+# brew install fzf
 
 # Git
 brew install git
@@ -78,21 +78,21 @@ brew install gpg
 brew install gpg-agent
 
 # Graphics Magick
-brew install graphicsmagick
+# brew install graphicsmagick
 
 # Graphviz
-brew install graphviz
+# brew install graphviz
 
 # Heroku
-brew install heroku
+# brew install heroku
 
 # hr
-brew install hr
+# brew install hr
 
 # HTTPie
-brew install httpie
+# brew install httpie
 
-# Ioping
+# Ioping - monitor iop latency in real time
 brew install ioping
 
 # JSON CLI Parser
@@ -102,104 +102,104 @@ brew install jq
 brew install lnav
 
 # Lynis
-brew install lynis
+# brew install lynis
 
 # Mac App Store CLI
 brew install mas
 
 # Mercurial
-brew install hg
+# brew install hg
 
-# Mosh
+# Mosh - remote terminal application that allows roaming
 brew install mosh
 
-# Namebench
+# Namebench - dns benchmark utility
 brew install namebench
 
 # Network Grep
 brew install ngrep
 
 # Nginx
-brew install nginx
+# brew install nginx
 
 # Node
-brew install node
+# brew install node
 
 # Overmind
-brew install overmind
+# brew install overmind
 
-# Pandoc
+# Pandoc - document convertor
 brew install pandoc
 
-# Parallel
+# Parallel - execute jobs concurrently
 brew install parallel
 
 # Peco
-brew install peco
+# brew install peco
 
 # pgcli
-brew install pgcli
+# brew install pgcli
 
-# Pigz
-brew install pigz
+# Pigz - parrallel gzip
+# brew install pigz
 
 # Pipe Viewer
 brew install pv
 
 # PostgreSQL
-brew install postgresql
+# brew install postgresql
 
-# Ranger
-brew install ranger
+# Ranger - ranger is a console file manager with VI key bindings
+# brew install ranger
 
 # Redis
-brew install redis
+# brew install redis
 
 # Ruby Install
-brew install ruby-install
+# brew install ruby-install
 
 # Rust
-brew install rust
+# brew install rust
 
 # SASSC
-brew install sassc
+# brew install sassc
 
-# ShellCheck
+# ShellCheck - shell script checker
 brew install shellcheck
 
 # Siege
-brew install siege
+# brew install siege
 
 # Sleepwatcher
-brew install sleepwatcher
+# brew install sleepwatcher
 
 # Tag
-brew install tag
+# brew install tag
 
 # Terraform
-brew install terraform
+# brew install terraform
 
-# The Silver Searcher
+# The Silver Searcher - code searching tool, like ack
 brew install the_silver_searcher
 
-# Tig
+# Tig - Tig uses the underlying Git commands to present the user with various views
 brew install tig
 
 # tmux
 brew install tmux
 brew install reattach-to-user-namespace
 
-# Tree
+# Tree - tree command viewer
 brew install tree
 
 # Vim
-brew install vim
+# brew install vim
 
 # Watch
 brew install watch
 
 # Yank
-brew install yank
+# brew install yank
 
 # Yarn
 brew install yarn
@@ -208,4 +208,21 @@ brew install yarn
 brew install youtube-dl
 
 # Z
-brew install z
+# brew install z
+
+
+# Kubernetes stuff
+brew install kubectl
+brew install kubernetes-helm
+brew install kubectx --with-short-names
+
+# AWS console stuff
+brew tap tm/homebrew https://git.tmaws.io/core-platform/homebrew-tm.git
+brew install tm/homebrew/console
+
+# Install go
+brew install go
+
+# zsh
+brew install zsh
+brew install zsh-completions

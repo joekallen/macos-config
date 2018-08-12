@@ -5,23 +5,25 @@
 
 # EXECUTION
 
-# Audio Bridge
-install_dmg_app "$AUDIO_BRIDGE_APP_URL" "$AUDIO_BRIDGE_VOLUME_NAME" "$AUDIO_BRIDGE_APP_NAME"
+# Alfred
+install_dmg_app "$ALFRED_APP_URL" "$ALFRED_VOLUME_NAME" "$ALFRED_APP_NAME"
 
-# Aurora Blu-Ray Copy
-install_dmg_app "$AURORA_BLU_RAY_COPY_APP_URL" "$AURORA_BLU_RAY_COPY_VOLUME_NAME" "$AURORA_BLU_RAY_COPY_APP_NAME"
+# Atom
+install_zip_app "$ATOM_APP_URL" "$ATOM_APP_NAME"
 
-# IVPN
-install_dmg_app "$IVPN_APP_URL" "$IVPN_VOLUME_NAME" "$IVPN_APP_NAME"
+# Docker
+install_dmg_app "$DOCKER_APP_URL" "$DOCKER_VOLUME_NAME" "$DOCKER_APP_NAME"
 
-# OmniGraffle
-install_dmg_app "$OMNIGRAFFLE_APP_URL" "$OMNIGRAFFLE_VOLUME_NAME" "$OMNIGRAFFLE_APP_NAME"
+# Insomnia
+install_dmg_app "$INSOMNIA_APP_URL" "$INSOMNIA_VOLUME_NAME" "$INSOMNIA_APP_NAME"
 
-# Retrobatch
-install_zip_app "$RETROBATCH_HANDLER_APP_URL" "$RETROBATCH_HANDLER_APP_NAME"
+# Kaleidoscope
+install_dmg_app "$KALEIDOSCOPE_APP_URL" "$KALEIDOSCOPE_APP_NAME" "$KALEIDOSCOPE_VOLUME_NAME"
 
-# Sonos
-install_dmg_app "$SONOS_APP_URL" "$SONOS_VOLUME_NAME" "$SONOS_APP_NAME"
+# NVM - Node version manager
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh
 
-# Sublime Text URL Handler
-install_zip_app "$SUBLIME_URL_HANDLER_APP_URL" "$SUBLIME_URL_HANDLER_APP_NAME"
+# One Password
+
+# Postman
+download_only "$POSTMAN_APP_URL" "$POSTMAN_FILE_NAME"

@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+# DESCRIPTION
+# Installs fonts.
+
+# SETUP
+
+# EXECUTION
+
+copy_files "lib/fonts" "Library/Fonts"
