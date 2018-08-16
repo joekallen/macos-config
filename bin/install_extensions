@@ -15,8 +15,22 @@ code --install-extension eamodio.gitlens
 code --install-extension donjayamanne.githistory
 code --install-extension huizhou.githd
 
+# VSCode - Local History
+code --install-extension xyz.local-history
+
+# VSCode Formatting
+code --install-extension esbenp.prettier-vscode
+
 # VSCode - Typescript
 code --install-extension eg2.tslint
+code --install-extension kisstkondoros.typelens
+code --install-extension kisstkondoros.vscode-codemetrics
+
+# VSCode - Node 
+code --install-extension pflannery.vscode-versionlens
+
+# VSCode - Regex preview
+code --install-extension chrmarti.regex
 
 # VSCode - Auto Import
 code --install-extension steoates.autoimport
@@ -35,6 +49,10 @@ code --install-extension gruntfuggly.todo-tree
 
 # VSCode - File Icons
 code --install-extension pkief.material-icon-theme
+code --install-extension erd0s.terraform-autocomplete
+
+# VSCode - Terraform
+code --install-extension mauve.terraform
 
 # Vim - Blockle
 install_git_app "$VIM_BLOCKLE_EXTENSION_URL" "$VIM_BLOCKLE_EXTENSION_PATH"

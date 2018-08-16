@@ -3,7 +3,7 @@
 # DESCRIPTION
 # Installs Homebrew Casks.
 
-brew cask install alfred
+#brew cask install alfred
 brew cask install appcleaner
 # brew cask install bartender
 # brew cask install carbon-copy-cloner
